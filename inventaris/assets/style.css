@@ -1,0 +1,243 @@
+/* =================================
+   GAYA GLOBAL (Berlaku di semua halaman)
+   ================================= */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* =================================
+   GAYA FORM (Login, Register, Tambah/Edit)
+   ================================= */
+.form-container {
+  width: 100%;
+  max-width: 450px; /* Lebar form login/register */
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="email"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+  font-size: 16px;
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form button,
+.button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+.button:hover {
+  background-color: #2980b9;
+}
+
+/* Tombol untuk aksi sekunder (misal: tolak, hapus) */
+.button-danger {
+  background-color: #e74c3c;
+}
+.button-danger:hover {
+  background-color: #c0392b;
+}
+
+/* =================================
+   GAYA TABEL (Dashboard Admin & User)
+   ================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+}
+
+tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Form di dalam tabel (aksi) */
+table form {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  background: none;
+}
+table form button {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* =================================
+   HEADER / NAVIGASI (di Dashboard)
+   ================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+.header h2 {
+  margin: 0;
+}
+.header a {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.header a:hover {
+  background-color: #c0392b;
+  text-decoration: none;
+}
+
+/* =================================
+   KELAS BANTUAN (Notifikasi & Status)
+   ================================= */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #e74c3c; /* Merah (default error) */
+}
+.alert-success {
+  background-color: #2ecc71; /* Hijau */
+}
+.alert-warning {
+  background-color: #f39c12; /* Kuning */
+}
+
+/* Status di tabel riwayat user */
+.status-pending {
+  color: #f39c12;
+  font-weight: bold;
+}
+.status-disetujui {
+  color: #2ecc71;
+  font-weight: bold;
+}
+.status-ditolak {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.status-dikembalikan {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.form-toggle {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-toggle a {
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-toggle a:hover {
+  text-decoration: underline;
+}
+
+/* (TAMBAHAN) Perbaiki notifikasi agar di tengah */
+.alert {
+  width: 90%;
+  max-width: 450px;
+  margin: 20px auto 0 auto;
+  box-sizing: border-box; /* Agar padding tidak menambah lebar */
+}
+
+/* (BARU) CSS untuk animasi notifikasi menghilang */
+.alert.fade-out {
+  opacity: 0; /* Membuatnya transparan */
+  transition: opacity 0.5s ease-out; /* Animasi selama 0.5 detik */
+}
